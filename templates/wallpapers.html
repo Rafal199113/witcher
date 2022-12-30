@@ -1,0 +1,16 @@
+
+{% extends 'userTemplate2.html' %}
+{% set userr=user %}
+{% set list=lista %}
+{% block container %}
+{%for i in range(0,x)%}
+  
+
+<a href="/download/{{lista[i]}}" style="width: 300px; text-decoration: none; text-align: center; " class="text"><img class="wallpaper" width="400" src="../static/wallpapers/{{lista[i]}}"></a>
+{%endfor%}
+
+
+
+
+  
+{% endblock %}

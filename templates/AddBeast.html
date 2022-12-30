@@ -1,0 +1,59 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Basic HTML5 Template</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="SitePoint">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='logincss.css') }}">
+
+
+</head>
+<body style="background-color:black;background-image: url(../static/wallpaper.jpg); background-size: auto; background-repeat: no-repeat;">
+  <ul>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn"></a>
+  
+    </li>
+    
+     
+    
+  </ul>
+  <div style="display: grid;  "  style="width:500px; margin:15%">
+    <form  method="post" id="form" style="width:500px; margin:7%">
+
+  
+      
+  
+      {{form.name.label(class='text')}}<br>
+      {{form.name(size=30,class='field2')}}
+      <br><br>
+      {{form.weeknes.label(class='text')}}<br>
+      {{form.weeknes(size=30,class='field2')}}
+      <br><br>
+      {{form.drop.label(class='text')}}<br>
+      {{form.drop(size=30,class='field2')}}
+      <br><br>
+      {{form.info.label(class='text')}}<br>
+      {{form.info(size=30,class='field2')}}
+      <br><br>
+      {{form.image.label(class='text')}}<br>
+      {{form.image(size=30,class='field2')}}
+      <br><br>
+  
+           {{form.submit(size=30,class='submitfield')}}
+  
+  <br><br>
+           
+  </form>
+
+     
+ 
+</div>
+</body>
+</html>

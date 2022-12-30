@@ -1,0 +1,37 @@
+
+{% extends 'userTemplate2.html' %}
+{% set userr=user %}
+
+
+{% block container %}
+
+{% if userr.username=='Admin' %}
+
+{% for x in result %}
+
+<div class="card" >
+  <div style="display:grid;">
+    <a  href="/beastinfo/{{x.id}}"><img class="beastMenu" src ="{{x.image}}"></a>
+   <label style="width: 300px; text-align: center; " class="text">{{x.name}}</label>
+   <a href="/delB/{{x.id}}" style="width: 300px; text-decoration: none; text-align: center; " class="text">Delete</a>
+  </div>
+</div>
+
+ 
+{% endfor %}
+<a href="/addBeast" style="text-decoration: none;"><p class="text">Dodaj</p></a>
+{% else %}
+{% for x in result %}
+<div class="card" >
+  <div style="display:grid;">
+    <a  href="/beastinfo/{{x.id}}"><img  class="beastMenu" src ="{{x.image}}"></a>
+   <label style="width: 300px; text-align: center; " class="text">{{x.name}}</label>
+  </div>
+</div>
+
+ 
+{% endfor %}
+{% endif %}
+
+  
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'userTemplate2.html' %}
+{% set userr=user %}
+{% block container %}
+{% if userr.username=='Admin' %}
+{% for x in result %}
+<div class="card" style="margin-bottom: 140px;  border-bottom: 1px solid burlywood;">
+    <div style="display:grid;">
+      <a  href="/gloinfo/{{x.id}}"><img class="beastMenu" src ="{{x.image}}"></a>
+     <label style="width: 300px; text-align: center; " class="text">{{x.name}}</label>
+     <a href="/delG/{{x.id}}" style="width: 300px; text-decoration: none; text-align: center; " class="text">Deleter</a>
+     <a href="/editGlo/{{x.id}}" style="width: 300px; text-decoration: none; text-align: center; " class="text">Edit</a>
+    </div>
+  </div>
+
+ 
+{% endfor %}
+<a href="/addGlo" style="text-decoration: none;"><p class="text">Dodaj</p></a>
+{% else %}
+{% for x in result %}
+<div class="card" style="margin-bottom: 40px;  border-bottom: 1px solid burlywood;">
+    <div style="display:grid;">
+      <a  href="/gloinfo/{{x.id}}"><img class="beastMenu" src ="{{x.image}}"></a>
+     <label style="width: 300px; text-align: center; " class="text">{{x.name}}</label>
+    </div>
+  </div>
+
+ 
+{% endfor %}
+{% endif %}
+
+  
+{% endblock %}

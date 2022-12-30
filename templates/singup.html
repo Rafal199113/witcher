@@ -1,0 +1,44 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Basic HTML5 Template</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="SitePoint">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='logincss.css') }}">
+
+
+</head>
+<body style="background-color:black;background-image: url(static/wallpaper.jpg); background-size: auto; background-repeat: no-repeat;">
+ <div style="margin-top: 20%;margin-left: 10%;">
+  <form action="/loginn" method="post" id="form">
+                  
+    {{form.username.label(class='text')}}<br>
+ 
+
+  {{form.username(size=30, class='field', autocomplete='off')}}
+<br><br>
+
+    
+  {{form.password.label(class='text')}}<br>
+    {{form.password(size=30,class='field')}}
+
+<p>{{form.submit(class='submit')}}</p>
+
+
+</form>
+<div id="cycki">
+<a href='register'><button  class='another' > Sing up</button></a>
+
+</div>
+
+
+
+ </div>
+
+</body>
+</html>                                                                          

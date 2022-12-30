@@ -1,0 +1,54 @@
+
+
+
+{% extends 'userTemplate2.html' %}
+{% set userr=user %}
+{% block container %}
+{% if userr.username=='Admin' %}
+
+<h1 style="color:burlywood;">{{result.name}}</h1>
+<p style="width: 100%; text-align:justify; text-justify:inter-word;" class="text">{{result.info}}</p>
+<p style="color:yellow; font-size: 15px;" class="text">Kliknij aby zmienić obrazek...</p>
+<img style="width:100%" id="calculate" onclick="change('{{result.id}}')" src="{{result.image}}">
+<h4><p class="text">Słabości:</p></h4>
+
+  {%for i in range(0,5)%}
+
+  <p class="text">{{result.weeknes[i]}}</p>
+{%endfor%}
+<br>
+<h4><p class="text">Łupy:</p></h4>
+
+{%for i in range(0,7)%}
+
+<p class="text">{{result.drop[i]}}</p>
+{%endfor%}
+{% else %}
+<h1 style="color:burlywood;">{{result.name}}</h1>
+<p style="width: 100%; text-align:justify; text-justify:inter-word;" class="text">{{result.info}}</p>
+<img style="width:100%" id="calculate"  src="{{result.image}}">
+<h4><p class="text">Słabości:</p></h4>
+
+  {%for i in range(0,5)%}
+
+  <p class="text">{{result.weeknes[i]}}</p>
+{%endfor%}
+<br>
+<h4><p class="text">Łupy:</p></h4>
+
+{%for i in range(0,7)%}
+
+<p class="text">{{result.drop[i]}}</p>
+{%endfor%}
+{% endif %}
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

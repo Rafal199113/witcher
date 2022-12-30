@@ -1,0 +1,22 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Basic HTML5 Template</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="SitePoint">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='logincss.css') }}">
+
+
+</head>
+<body style="background-color:black;background-image: url(../static/wallpaper.jpg); background-size: auto; background-repeat: no-repeat;">
+
+ 
+<h1 class="text">{{message}}</h1>
+<script src="../static/script.js"></script>
+</body>
+</html>

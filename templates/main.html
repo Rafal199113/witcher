@@ -1,0 +1,54 @@
+{% extends 'userTemplate.html' %}
+ 
+{% block container %}
+
+  
+{% endblock %}
+{% block data %}
+<h4 style="color:burlywood"> Aktualne logowanie: {{data}}</h4>
+{% endblock %}
+{% block top %}
+<div style="margin: 10%; width:500px">
+    <h2 style="color:burlywood;">Top 3 Logowania</h2>
+    {%for key in list%}
+    <div style="display: flex; padding: 10px;">
+    <img width="60" src="../static/witcher_blue.png"> <div  style=" background-color:rgb(43, 44, 44) ; box-shadow: 10px; width: 100px;"><p style="text-align: center;" class="text">{{key}}</p></div>   <div style="width: 100px;background-color:rgb(99, 102, 102) ;"><p style="text-align: center;" class="text">{{list[key]}}</p></div>
+   </div>
+     {%endfor%}
+</div>
+{% endblock %}
+
+
+{% block news %}
+ 
+
+    
+    {% if LoggedUser.username=='Admin' %}
+    {%for key in news%}
+ 
+    <h2 class="text">{{key.name}}</h2>
+    <img style="width: 100%;" src="{{key.image}}">
+    {%for i in range(0,5)%}
+    
+    <p class="text"  style="text-align: justify;width: 100%;">{{key.info[i]}}</p>
+    {%endfor%}
+    <a href="/delNews/{{key.id}}" style="text-decoration: none;"><p class="text">Delete</p></a>
+    <hr style="border-top: 1px solid burlywood;">
+      {%endfor%}
+    <a href="/addNews" style="text-decoration: none;"><p style="width: 100%;" class="text">Dodaj</p></a>
+    {%else%}
+    {%for key in news%}
+ 
+  <h2 class="text">{{key.name}}</h2>
+  <img style="width: 100%;" src="{{key.image}}">
+  {%for i in range(0,5)%}
+  
+  <p class="text" style="text-align: justify;">{{key.info[i]}}</p>
+  {%endfor%}
+  
+  <hr style="border-top: 1px solid burlywood;">
+    {%endfor%}
+    {%endif%}
+    {% endblock %}
+
+

@@ -1,0 +1,84 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Witcher: Wild Hunt</title>
+  <meta name="description" content="Witcher">
+  <meta name="author" content="Xylohunter">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='logincss.css') }}">
+
+
+</head>
+<body style="background-color:black;background-image: url(../static/wallpaper.jpg); background-size: auto; background-repeat: no-repeat;">
+  <ul>
+   <li>
+    <div style=" display: grid;">
+    <a href="/main">  <img src="../static/awatar.png" width="200"></a>
+     
+    </div>
+   
+  </li>
+    <li>
+     
+      <div  style="display: grid; width: 200px; ">
+        <a href="/glosariusz" > <img  class="menuButton" src="../static/glosary.png"></a>
+
+    </div>
+    <div>
+      <p style="width: 100%; text-align: center; font-size: 20px; color: burlywood;" >Glosariusz</p>
+    </div>
+    </li>
+    <li class="dropdown">
+      <div  style="display: grid; width: 300px; ">
+        <a href="/bestiariusz" > <img  class="menuButton" src="../static/bestiary.png"></a>
+        <p style="width: 100%; text-align: center; font-size: 20px; color: burlywood;" >Bestiariusz</p>
+    </div>
+    <div>
+    </li>
+    <li class="dropdown">
+      <div  style="display: grid; width: 300px; ">
+        <a href="/wallpapers" > <img  class="menuButton" src="../static/wallpapers.png"></a>
+
+    </div>
+    <div>
+      <p style="width: 100%; text-align: center; font-size: 20px; color: burlywood;" >Tapety</p>
+    </div>
+    </li>
+  </ul>
+  <div style="display: flex;">
+  <div style=" width: 30%;" id="formContainer">
+    {% block container %}
+  
+    {% endblock %}
+
+ </div>
+ <div id="loader" class="center"></div>
+ <div  style="width: auto; margin-top: 10%; max-width: 600px; " id="formContainer">
+    <h1 style="color:burlywood">Wiedźmin </h1>
+    <p style="color:burlywood; text-align:justify">Wiedźmin jest produkcją typu cRPG, stworzoną przez polskie studio CD Projekt RED. Tytuł został oparty na słynnej książkowej sadze fantasy Andrzeja Sapkowskiego, opowiadającej historię Geralta z Rivii, profesjonalnego zabójcy potworów. Znajomość pierwowzoru nie jest jednak konieczna, by cieszyć się zabawą. Fabuła gry skupia się na wydarzeniach rozgrywających się po zakończeniu powieści. Dodatkowo, główny bohater niefortunnie został dotknięty amnezją, przez co najważniejsze nawiązania do książek są na bieżąco tłumaczone.
+</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vCsu1CueLgo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+   
+      <h1 style="color:burlywood">Wiedźmin 2: Zabójca Krulów</h1>
+      <p style="color:burlywood; text-align:justify">Wiedźmin 2: Zabójcy Królów to RPG akcji, będący kontynuacją wielkiego hitu opartego na twórczości polskiego pisarza Andrzeja Sapkowskiego. Akcja rozgrywa się zaraz po wydarzeniach znanych z pierwszej i kontynuuje wątek udaremnionego przez Geralta zamachu na króla Foltesta. Sprawa szybko wymyka się spod kontroli, bo na arenie wydarzeń pojawia tajemniczy mężczyzna znany jako Królobójca. Biały Wilk zostaje wciągnięty w zawiłą i pełną niebezpieczeństw polityczną intrygę, a jego decyzje zaważą o losach mieszkańców kilku królestw.
+      </p>
+  
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/jk5r1mP6om8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+   
+      <h1 style="color:burlywood">Wiedźmin 3:Dziki Gon</h1>
+      <p style="color:burlywood; text-align:justify">Wiedźmin 3: Dziki Gon (The Witcher 3: Wild Hunt) na komputery osobiste to trzecia odsłona popularnej serii gier RPG akcji opartej na prozie Andrzeja Sapkowskiego. Tytuł wyprodukowało studio CD Projekt RED, czyli zespół odpowiedzialny również za dwie poprzednie części – Wiedźmina z 2007 roku i Wiedźmina 2: Zabójcy Królów z 2011 roku. W pięć lat po premierze CDP RED wypuściło na rynek pakiet Wiedźmin 3: Dziki Gon - Edycja Kompletna, zawierający podstawową wersję gry i całą dodatkowa zawartość wydaną po jej premierze, a także dwa duże rozszerzenia fabularne, czyli Serca z kamienia oraz Krew i wino i oferujący wiele technicznych usprawnień przygotowanych z myślą o konsolach dziewiątej generacji, w tym obsługę ray tracingu. Co ważne, choć Wiedźmin 3: Dziki Gon - Edycja Kompletna to samodzielny produkt, wszyscy posiadacze wcześniejszej wersji gry otrzymali wprowadzone nowości w postaci darmowej aktualizacji.</p>
+  
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ehjJ614QfeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+ </div>
+</div>
+<script src="../static/script.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</body>
+</html>

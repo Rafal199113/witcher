@@ -1,0 +1,61 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Basic HTML5 Template</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="SitePoint">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='logincss.css') }}">
+
+
+</head>
+<body style="background-color:black;background-image: url(static/wallpaper.jpg); background-size: auto; background-repeat: no-repeat;">
+ <div style="margin-top: 20%;margin-left: 10%;">
+  <form  method="post" id="form">
+                  
+    {{registerform.username.label(class='text')}}<br>
+ 
+
+  {{registerform.username(size=30, class='field')}}
+<br><br>
+
+    
+  {{registerform.password1.label(class='text')}}<br>
+    {{registerform.password1(size=30,class='field')}}
+    <br><br>
+
+    
+    {{registerform.password2.label(class='text')}}<br>
+      {{registerform.password2(size=30,class='field')}}
+
+      <br><br>
+    
+      {{registerform.age.label(class='text')}}<br>
+        {{registerform.age(size=30,class='field')}}
+
+        <br><br>
+
+    
+        {{registerform.email.label(class='text')}}<br>
+          {{registerform.email(size=30,class='field')}}
+
+       <br><br>
+         {{registerform.submit(size=30,class='submitfield')}}
+
+<br><br>
+          {{ recaptcha }} 
+
+</form>
+<p style="color:red;">{{ message }}</p>
+<div id="cycki">
+<button  class='another'> Register</button>
+
+</div>
+ </div>
+
+</body>
+</html>

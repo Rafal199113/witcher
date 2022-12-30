@@ -1,0 +1,42 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Basic HTML5 Template</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="SitePoint">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='logincss.css') }}">
+
+
+</head>
+<body style="background-color:black;background-image: url(../static/wallpaper.jpg); background-size: auto; background-repeat: no-repeat;">
+  
+  <div style="margin-top: 14%;"  id="formContainer">
+<h2><p style="color: burlywood;">Dane użytkownika</p></h2>
+<table>
+  <form  method="post" id="form">
+  <tbody>
+  <tr><td>Login</td><td>{{LoggedUser.username}}</td><td>{{registerform.username(size=30, class='field',value=LoggedUser.username)}}</td></tr>
+  <tr><td>Password</td><td>{{LoggedUser.password}}</td><td>{{registerform.password1(size=30,class='field',value=LoggedUser.password)}}</td></tr>
+  <tr><td>Wiek</td><td>{{LoggedUser.age}}</td><td>      {{registerform.age(size=30,class='field',value=LoggedUser.age)}}</td></tr>
+  <tr><td>E-mail</td><td>{{LoggedUser.mail}}</td><td> {{registerform.email(size=30,class='field',value=LoggedUser.mail)}}</td></tr>
+  </tbody>
+  </table>
+
+ 
+                  
+
+
+     <br><br>
+       {{registerform.submit(size=30,class='submitfield')}}
+
+
+
+</form>
+</div>
+</body>
+</html>

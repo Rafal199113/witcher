@@ -1,0 +1,51 @@
+
+
+{% extends 'userTemplate2.html' %}
+{% set userr=user %}
+{% block container %}
+{% if userr.username=='Admin' %}
+
+<h1 style="color:burlywood;">{{result.name}}</h1>
+<img src="{{result.image}}">
+<br>
+<h2 style="color:burlywood;">Ogólny opis</h2>
+{%for i in range(0,5)%}
+  
+<p class="text" style="text-align: justify;">{{result.info[i]}}</p>
+{%endfor%}
+<br>
+<h2 style="color:burlywood;">Charakter</h2>
+{%for i in range(0,5)%}
+  
+<p class="text" style="text-align: justify;">{{result.charakter[i]}}</p>
+{%endfor%}
+<br>
+<h2 style="color:burlywood;">Wygląd</h2>
+{%for i in range(0,5)%}
+  
+<p class="text" style="text-align: justify;">{{result.look[i]}}</p>
+{%endfor%}
+{%else%}
+
+<h1 style="color:burlywood;">{{result.name}}</h1>
+<img src="{{result.image}}">
+<br>
+<h2 style="color:burlywood;">Ogólny opis</h2>
+{%for i in range(0,5)%}
+  
+<p class="text" style="text-align: justify;">{{result.info[i]}}</p>
+{%endfor%}
+<br>
+<h2 style="color:burlywood;">Charakter</h2>
+{%for i in range(0,5)%}
+  
+<p class="text" style="text-align: justify;">{{result.charakter[i]}}</p>
+{%endfor%}
+<br>
+<h2 style="color:burlywood;">Wygląd</h2>
+{%for i in range(0,5)%}
+  
+<p class="text" style="text-align: justify;">{{result.look[i]}}</p>
+{%endfor%}
+{%endif%}
+{% endblock %}

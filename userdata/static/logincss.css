@@ -1,0 +1,149 @@
+#formContainer{
+
+margin: 17%;
+
+}
+.text{
+
+    color:burlywood;
+}
+.field{
+	border: none;
+	border-bottom: 2px solid burlywood;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width:100px;
+	transition: .2s;
+    text-align: center;
+    outline: none;
+	color:burlywood;
+
+
+}
+.submitfield{
+	border: none;
+
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width:100px;
+	transition: .2s;
+    text-align: center;
+    outline: none;
+	color:burlywood;
+
+
+}
+.submit{
+
+	border: none;
+	
+	background: none;
+
+	font-weight: 700;
+	width:100px;
+	transition: .2s;
+    text-align: center;
+    outline: none;
+	color:burlywood;
+
+
+}
+
+#cycki{
+
+margin-top: 10%;
+
+}
+.another{
+
+	border: none;
+	
+	background: none;
+
+	font-weight: 700;
+	width:100px;
+	transition: .2s;
+    text-align: center;
+    outline: none;
+	color:burlywood;
+
+
+}
+.submit:hover
+{
+
+	font-size: 20px;
+
+}
+.submitfield:hover{
+
+	font-size: 20px;
+
+}
+.another:hover{
+
+	font-size: 20px;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	margin-top:20%;
+	
+  }
+  
+  li {
+	float: left;
+  }
+  
+  li a, .dropbtn {
+
+	color: burlywood;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+	background-color: #38444d;
+  }
+  
+  li.dropdown {
+	display: inline-block;
+	color:burlywood;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	color:burlywood;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	color: burlywood;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #38444d;}
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+
+  #user{
+color:burlywood;
+font-size: 20px;
+
+
+  }
